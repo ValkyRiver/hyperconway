@@ -292,7 +292,7 @@ vertex_coords = {
     (j5, k5, l5, m5, h4, g4, f4): "MR",
     (m5, n5, o5, p5, i4, h4): "MRRb",
     (j4, i4, p5, q5, j(q5), j(p5), j(i4)): "RL",
-    (j(h4), j(i4), j(p5), j(o5), j(n5), j(m5)): "RLLb",
+    (j(h4), j(i4), j(p5), j(o5), j(n5), j(m5)): "RLRb",
     (j(f4), j(g4), j(h4), j(m5), j(l5), j(k5), j(j5)): "RR",
 
    # DISTANCE 6
