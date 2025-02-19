@@ -1129,7 +1129,7 @@ def play(arg=""):
 def speed(option):
     C.delete("speed")
     global SPEED
-    speedlist = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5,5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 22, 24, 26, 28, 30, 32]
+    speedlist = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 22, 24, 26, 28, 30, 32]
     if speedlist.index(SPEED) + option >= 0 and speedlist.index(SPEED) + option <= len(speedlist) - 1:
         SPEED = speedlist[speedlist.index(SPEED) + option]
     C.create_text(0.056*scale, 0.238*scale, text=str(SPEED) + " / s", font=("Arial", int(scale/70), "bold"), tags=("speed"))
