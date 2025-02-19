@@ -1121,7 +1121,10 @@ def play(arg=""):
         PLAY = not PLAY
     if PLAY:
         next_generation()
-        C.after(int(1000/SPEED), play)
+        if CENTER == "X":
+            C.after(int(1000/SPEED) - 20, play) # speed is only approximate — it assumes next_generation() takes 20ms to process
+        else:
+            C.after(int(1000/SPEED) - 25, play) # it takes longer to render when the center is not at the origin
 
 def speed(option):
     C.delete("speed")
