@@ -49,6 +49,7 @@ def onclick(event):
         for g, generation in enumerate(UNIVERSE):
             if g > GEN:
                 UNIVERSE.remove(generation)
+        print(cell)
         render_universe(UNIVERSE[GEN], RULE, CENTER, HOLONOMY, HISTORY)
 
 def change_center(event):
@@ -451,8 +452,8 @@ vertex_coords = {
     (z7, A7, B7, C7, r6, q6, p6): "MMR",
     (C7, D7, E7, F7, s6, r6): "MMRRb",
     (F7, G7, H7, I7, u6, t6, s6): "MRL",
-    (I7, J7, K7, w6, v6, u6): "MRRLa",
-    (K7, L7, M7, N7, x6, w6): "MRRMa",
+    (I7, J7, K7, w6, v6, u6): "MRLRb",
+    (K7, L7, M7, N7, x6, w6): "MRRLa",
     (N7, O7, P7, Q7, y6, x6): "MRRRa",
     (Q7, R7, S7, A6, z6, y6): "MRRRb",
     (S7, T7, U7, V7, C6, B6, A6): "RLL",
