@@ -62,8 +62,6 @@ def change_center(event):
             else:
                 old_center = CENTER
                 CENTER = cell
-                print("Old center: ", old_center)
-                print("New center: ", CENTER)
 
                 # HOLONOMY
                 if old_center == "X":
@@ -150,7 +148,6 @@ def change_center(event):
                             HOLONOMY = (HOLONOMY + 1) % 14
                         elif CENTER == opp_hept[0:-1]:
                             HOLONOMY = (HOLONOMY + 1) % 14
-                    print("Opposite heptagon: ", opp_hept)
 
             render_universe(UNIVERSE[GEN], RULE, CENTER, HOLONOMY, HISTORY)
 
