@@ -847,7 +847,7 @@ def detect_period():
             P.geometry(window_size)
             P.title("Detect period")
             Label(P, text= "Potential explosion detected", font=("Arial", int(scale/50), "bold")).place(x=0.01*scale, y=0.01*scale)
-            Label(P, text= "The pattern reached a population of " + str(len(current_generation)) + " in generation " + str(generation+1), font=("Arial", int(scale/70), "bold")).place(x=0.01*scale, y=0.045*scale)
+            Label(P, text= "The pattern reached a population of " + str(len(current_generation)) + " in generation " + str(GEN+generation+1), font=("Arial", int(scale/70), "bold")).place(x=0.01*scale, y=0.045*scale)
             return
         elif set(current_generation) in period_universe:
             period = generation - period_universe.index(set(current_generation)) + 1
@@ -857,20 +857,20 @@ def detect_period():
                 P.geometry(window_size)
                 P.title("Detect period")
                 Label(P, text= "Spark/diehard detected", font=("Arial", int(scale/50), "bold")).place(x=0.01*scale, y=0.01*scale)
-                Label(P, text= "The pattern stabilizes on generation " + str(period_universe.index(set(current_generation))), font=("Arial", int(scale/70), "bold")).place(x=0.01*scale, y=0.045*scale)
+                Label(P, text= "The pattern stabilizes on generation " + str(GEN+period_universe.index(set(current_generation))), font=("Arial", int(scale/70), "bold")).place(x=0.01*scale, y=0.045*scale)
             elif period == 1:
                 P = Toplevel(C)
                 P.geometry(window_size)
                 P.title("Detect period")
                 Label(P, text= str(minpop) + "-cell still life detected", font=("Arial", int(scale/50), "bold")).place(x=0.01*scale, y=0.01*scale)
         
-                Label(P, text= "The pattern stabilizes on generation " + str(period_universe.index(set(current_generation))), font=("Arial", int(scale/70), "bold")).place(x=0.01*scale, y=0.045*scale)
+                Label(P, text= "The pattern stabilizes on generation " + str(GEN+period_universe.index(set(current_generation))), font=("Arial", int(scale/70), "bold")).place(x=0.01*scale, y=0.045*scale)
             else:
                 P = Toplevel(C)
                 P.geometry(window_size)
                 P.title("Detect period")
                 Label(P, text= str(minpop) + "P" + str(period) + " detected", font=("Arial", int(scale/50), "bold")).place(x=0.01*scale, y=0.01*scale)
-                Label(P, text= "The pattern stabilizes on generation " + str(period_universe.index(set(current_generation))), font=("Arial", int(scale/70), "bold")).place(x=0.01*scale, y=0.045*scale)
+                Label(P, text= "The pattern stabilizes on generation " + str(GEN+period_universe.index(set(current_generation))), font=("Arial", int(scale/70), "bold")).place(x=0.01*scale, y=0.045*scale)
             return
         else:
             period_universe.append(set(current_generation))
