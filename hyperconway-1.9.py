@@ -108,9 +108,9 @@ def change_center(event):
                 elif CENTER[-1] in "0123456" and old_center[-1] in "0123456" and int(CENTER[1])%7 == (int(old_center[1])-1)%7:
                     HOLONOMY = (HOLONOMY - 3) % 14
 
-                elif CENTER[-2:] == "MR" and old_center[-1] == "R":
+                elif CENTER[-2:] == "MR" and old_center[-1] == "R" and CENTER[0:-2] == old_center[0:-1]:
                     HOLONOMY = (HOLONOMY - 1) % 14
-                elif CENTER[-1] == "R" and old_center[-2:] == "MR":
+                elif CENTER[-1] == "R" and old_center[-2:] == "MR" and CENTER[0:-1] == old_center[0:-2]:
                     HOLONOMY = (HOLONOMY + 1) % 14
 
                 else: # requires finding opp_hept
