@@ -834,7 +834,7 @@ def next_generation():
     periods = []
 
 def detect_period():
-    gen_threshold = 256
+    gen_threshold = 512
     pop_threshold = 1024
     window_size = str(int(scale*0.65)) + "x" + str(int(scale*0.09))
     
