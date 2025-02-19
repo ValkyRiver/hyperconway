@@ -1049,7 +1049,7 @@ def export_code(rule, universe):
 
 def import_code(code):
     try:
-        if code.strip[0] == "B":
+        if code.strip()[0] == "B":
             C.delete("all")
             code_list = (code.strip()).split(" ")
             global GEN; global RULE; global UNIVERSE
