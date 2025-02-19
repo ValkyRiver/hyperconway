@@ -49,7 +49,6 @@ def onclick(event):
         for g, generation in enumerate(UNIVERSE):
             if g > GEN:
                 UNIVERSE.remove(generation)
-        print(cell)
         render_universe(UNIVERSE[GEN], RULE, CENTER, HOLONOMY, HISTORY)
 
 def change_center(event):
