@@ -839,7 +839,7 @@ def detect_period():
     window_size = str(int(scale*0.65)) + "x" + str(int(scale*0.09))
     
     period_universe = [set(UNIVERSE[GEN])]; pops = [len(UNIVERSE[GEN])]
-    for generation in range(256):
+    for generation in range(gen_threshold):
         current_generation = advance(RULE, list(period_universe[-1]))
         if len(current_generation) >= pop_threshold:
             P = Toplevel(C)
